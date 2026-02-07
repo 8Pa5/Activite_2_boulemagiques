@@ -36,4 +36,4 @@ ex :
 * Jinja = Coloration et autocomplétion des templates Jinja (utilisés par flask)
 
 ### Installation de flask
-'pip install flak'
+'pip install flak'njs
