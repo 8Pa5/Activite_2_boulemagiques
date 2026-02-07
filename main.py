@@ -1,6 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from random import choice
-
 reponses_possible = [
 " Essaye plus tard ",
 " Essaye encore ",
@@ -27,13 +26,11 @@ reponses_possible = [
 app = Flask(__name__)
 @app.route("/",methods=["GET", "POST"])
 def index():
-    reponse=0
-
+    reponse= 0
     if request.method == "POST":
+        reponse= choice(reponses_possible)
 
-
-
-    return render_template("index.html")
+    return render_template("index.html", reponse = reponse)
 
 
 
